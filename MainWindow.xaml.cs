@@ -135,6 +135,38 @@ namespace Prakt17_praktika1_
         {
             DataGrid1.ItemsSource = db.EmployeeCashes.Local.ToBindingList();
         }
+
+        private void ReFindEmployee_Button(object sender, RoutedEventArgs e)
+        {
+            if (txtFind.Text.Length == 0)
+            {
+                MessageBox.Show("Введите слово");
+                return;
+            }
+            for (int i = 0; i < DataGrid1.Items.Count; i++)
+            {
+                var row = (EmployeeCash)DataGrid1.Items[i];
+                string findContent = row.LastName;
+                try
+                {
+                    if (findContent != null && findContent.Contains(txtFind.Text))
+                    {
+                        object item = DataGrid1.Items[i];
+                        DataGrid1.SelectedItem = item;
+                        DataGrid1.ScrollIntoView(item);
+                        row.LastName = txtRefind.Text;
+                        db.SaveChanges();
+                        DataGrid1.Items.Refresh();
+                        DataGrid1.Focus();
+                        break;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Не найдено совпадений");
+                }
+            }
+        }
     }
 }
 namespace PrimerBD

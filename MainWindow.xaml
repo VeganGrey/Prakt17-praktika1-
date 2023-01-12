@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prakt17_praktika1_"
         mc:Ignorable="d"
-        Title="Работники" Height="330" Width="696" WindowStartupLocation="CenterScreen" MinHeight="330" MinWidth="696" Loaded="Window_Loaded">
+        Title="Работники" Height="355" Width="925" WindowStartupLocation="CenterScreen" MinHeight="330" MinWidth="696" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="17.945"/>
@@ -27,10 +27,12 @@
         <GroupBox Header="Поиск" Grid.Row="1" Margin="0,0,348,0" Grid.RowSpan="2" Height="61" VerticalAlignment="Top">
             <Grid>
                 <TextBox x:Name="txtFind" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="125" Height="26"/>
-                <Button Content="Поиск" HorizontalAlignment="Left" Margin="182,0,0,0" VerticalAlignment="Center" Height="26" Width="111" Click="FindEmployee_Button"/>
+                <Button Content="Поиск" HorizontalAlignment="Left" Margin="172,0,0,0" VerticalAlignment="Center" Height="26" Width="110" Click="FindEmployee_Button"/>
+                <TextBox x:Name="txtRefind" HorizontalAlignment="Left" Margin="301,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="125" Height="26"/>
+                <Button Content="Замена" HorizontalAlignment="Left" Margin="445,0,0,0" VerticalAlignment="Center" Height="26" Width="110" Click="ReFindEmployee_Button"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Фильтр" Margin="348,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="348" Height="61">
+        <GroupBox Header="Фильтр" Grid.Row="1" VerticalAlignment="Center" Width="348" Height="61" HorizontalAlignment="Right">
             <Grid>
                 <TextBox x:Name="txtFiltered" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="125" Height="26"/>
                 <Button HorizontalAlignment="Left" Margin="187,0,0,0" VerticalAlignment="Center" Height="26" Width="119" Content="Фильтр" Click="FilterEmployee_Button"/>
