@@ -1,0 +1,31 @@
+﻿<Window x:Class="Prakt17_praktika1_.AddEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prakt17_praktika1_"
+        mc:Ignorable="d"
+        Title="Добавить работника" Height="450" Width="344" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Margin="37,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LastName" HorizontalAlignment="Left" Margin="37,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="SecondName" HorizontalAlignment="Left" Margin="37,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PodrazdName" HorizontalAlignment="Left" Margin="37,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="DataPicker1" HorizontalAlignment="Left" Margin="37,194,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="CashSumm" HorizontalAlignment="Left" Margin="37,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Experience" HorizontalAlignment="Left" Margin="37,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Category" HorizontalAlignment="Left" Margin="37,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="37,21,0,0" VerticalAlignment="Top"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="37,57,0,0" VerticalAlignment="Top"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="37,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Имя цеха" HorizontalAlignment="Left" Margin="37,137,0,0" VerticalAlignment="Top"/>
+        <Label Content="Дата начала работы" HorizontalAlignment="Left" Margin="37,172,0,0" VerticalAlignment="Top"/>
+        <Label Content="Зарплата" HorizontalAlignment="Left" Margin="37,213,0,0" VerticalAlignment="Top"/>
+        <Label Content="Стаж" HorizontalAlignment="Left" Margin="37,252,0,0" VerticalAlignment="Top"/>
+        <Label Content="Разряд" HorizontalAlignment="Left" Margin="37,301,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Post" HorizontalAlignment="Left" Margin="38,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Должность" HorizontalAlignment="Left" Margin="37,341,0,0" VerticalAlignment="Top"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="67,399,0,0" VerticalAlignment="Top" FontSize="16" Click="AddEmloyee_Button"/>
+        <Button Content="Отменить" HorizontalAlignment="Left" Margin="207,399,0,0" VerticalAlignment="Top" FontSize="16" Click="Quit"/>
+    </Grid>
+</Window>
