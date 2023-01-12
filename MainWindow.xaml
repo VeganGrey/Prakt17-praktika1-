@@ -9,18 +9,30 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="17.945"/>
+            <RowDefinition Height="61.02"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Menu VerticalAlignment="Center" Grid.Row="0">
+        <Menu VerticalAlignment="Center" Height="18">
             <MenuItem Header="Таблица">
                 <MenuItem Header="Добавить работника" Click="AddEmployee_Button"></MenuItem>
                 <MenuItem Header="Изменить данные работника" Click="EditEmployee_Button"></MenuItem>
+                <MenuItem Header="Поиск" Click="FindEmployee_Button"></MenuItem>
                 <MenuItem Header="Удалить" Click="DeleteEmployee_Button"></MenuItem>
             </MenuItem>
             <MenuItem Header="Справка" Click="Spravka"></MenuItem>
             <MenuItem Header="Выход" Click="Quit"></MenuItem>
         </Menu>
-        <DataGrid x:Name="DataGrid1" IsReadOnly="True"  Grid.Row="1" AutoGenerateColumns="False">
+        <GroupBox Header="Поиск" Grid.Row="1" Margin="0,0,348,0" Grid.RowSpan="2" Height="61" VerticalAlignment="Top">
+            <Grid>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Фильтр" Margin="0,0,0,235" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Right" Width="348">
+            <Grid>
+
+            </Grid>
+        </GroupBox>
+        <DataGrid x:Name="DataGrid1" IsReadOnly="True"  Grid.Row="2" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="13*" Header="ID" Binding="{Binding Id}"></DataGridTextColumn>
                 <DataGridTextColumn Width="40*" Header="Фамилимя" Binding="{Binding LastName}"></DataGridTextColumn>
