@@ -90,7 +90,50 @@ namespace Prakt17_praktika1_
 
         private void FindEmployee_Button(object sender, RoutedEventArgs e)
         {
+            if (txtFind.Text.Length == 0)
+            {
+                MessageBox.Show("Введите слово");
+                return;
+            }
+            for(int i=0;i<DataGrid1.Items.Count;i++)
+            {
+                var row = (EmployeeCash)DataGrid1.Items[i];
+                string findContent = row.LastName;
+                try
+                {
+                    if(findContent != null && findContent.Contains(txtFind.Text))
+                    {
+                        object item = DataGrid1.Items[i];
+                        DataGrid1.SelectedItem = item;
+                        DataGrid1.ScrollIntoView(item);
+                        DataGrid1.Focus();
+                        break;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Не найдено совпадений");
+                }
+            }
+        }
 
+        List<EmployeeCash> _employee;
+
+        private void FilterEmployee_Button(object sender, RoutedEventArgs e)
+        {
+            if (txtFind.Text.Length == 0)
+            {
+                MessageBox.Show("Введите слово");
+                return;
+            }
+            _employee = db.EmployeeCashes.ToList();
+            var filtered = _employee.Where(_employee => _employee.LastName == txtFiltered.Text);
+            DataGrid1.ItemsSource = filtered;
+        }
+
+        private void ClearFilteredEmployee_Button(object sender, RoutedEventArgs e)
+        {
+            DataGrid1.ItemsSource = db.EmployeeCashes.Local.ToBindingList();
         }
     }
 }

@@ -17,6 +17,8 @@
                 <MenuItem Header="Добавить работника" Click="AddEmployee_Button"></MenuItem>
                 <MenuItem Header="Изменить данные работника" Click="EditEmployee_Button"></MenuItem>
                 <MenuItem Header="Поиск" Click="FindEmployee_Button"></MenuItem>
+                <MenuItem Header="Фильтр" Click="FilterEmployee_Button"></MenuItem>
+                <MenuItem Header="Сбросить фильтр" Click="ClearFilteredEmployee_Button"></MenuItem>
                 <MenuItem Header="Удалить" Click="DeleteEmployee_Button"></MenuItem>
             </MenuItem>
             <MenuItem Header="Справка" Click="Spravka"></MenuItem>
@@ -24,12 +26,14 @@
         </Menu>
         <GroupBox Header="Поиск" Grid.Row="1" Margin="0,0,348,0" Grid.RowSpan="2" Height="61" VerticalAlignment="Top">
             <Grid>
-
+                <TextBox x:Name="txtFind" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="125" Height="26"/>
+                <Button Content="Поиск" HorizontalAlignment="Left" Margin="182,0,0,0" VerticalAlignment="Center" Height="26" Width="111" Click="FindEmployee_Button"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Фильтр" Margin="0,0,0,235" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Right" Width="348">
+        <GroupBox Header="Фильтр" Margin="348,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="348" Height="61">
             <Grid>
-
+                <TextBox x:Name="txtFiltered" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="125" Height="26"/>
+                <Button HorizontalAlignment="Left" Margin="187,0,0,0" VerticalAlignment="Center" Height="26" Width="119" Content="Фильтр" Click="FilterEmployee_Button"/>
             </Grid>
         </GroupBox>
         <DataGrid x:Name="DataGrid1" IsReadOnly="True"  Grid.Row="2" AutoGenerateColumns="False">
@@ -46,5 +50,6 @@
                 <DataGridTextColumn Width="40*" Header="Должность" Binding="{Binding Post}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
+
     </Grid>
 </Window>
