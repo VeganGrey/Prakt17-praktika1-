@@ -68,6 +68,25 @@ namespace Prakt17_praktika1_
         {
             this.Close();
         }
+
+        private void DeleteEmployee_Button(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult res = MessageBox.Show("Удалить запись???", "Удаление записи", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if(res == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    EmployeeCash row = (EmployeeCash)DataGrid1.SelectedItems[0];
+                    db.EmployeeCashes.Remove(row);
+                    db.SaveChanges();
+                    DataGrid1.Items.Refresh();
+                }
+                catch(ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("Выберите запись");
+                }
+            }
+        }
     }
 }
 namespace PrimerBD

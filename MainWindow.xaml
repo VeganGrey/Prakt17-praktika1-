@@ -15,6 +15,7 @@
             <MenuItem Header="Таблица">
                 <MenuItem Header="Добавить работника" Click="AddEmployee_Button"></MenuItem>
                 <MenuItem Header="Изменить данные работника" Click="EditEmployee_Button"></MenuItem>
+                <MenuItem Header="Удалить" Click="DeleteEmployee_Button"></MenuItem>
             </MenuItem>
             <MenuItem Header="Справка" Click="Spravka"></MenuItem>
             <MenuItem Header="Выход" Click="Quit"></MenuItem>
