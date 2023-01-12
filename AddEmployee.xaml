@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prakt17_praktika1_"
         mc:Ignorable="d"
-        Title="Добавить работника" Height="450" Width="344" WindowStartupLocation="CenterScreen">
+        Title="Добавить работника" Height="471" Width="344" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <TextBox x:Name="FirstName" HorizontalAlignment="Left" Margin="37,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="LastName" HorizontalAlignment="Left" Margin="37,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
