@@ -87,7 +87,7 @@
       <DependentUpon>EditEmployee.xaml</DependentUpon>
     </Compile>
     <Compile Include="EmployeeCash.cs">
-      <DependentUpon>ModelDataBase.tt</DependentUpon>
+      <DependentUpon>ModelDateBase.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -95,20 +95,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelDataBase.Context.cs">
+    <Compile Include="ModelDateBase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDataBase.Context.tt</DependentUpon>
+      <DependentUpon>ModelDateBase.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelDataBase.cs">
+    <Compile Include="ModelDateBase.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDataBase.tt</DependentUpon>
+      <DependentUpon>ModelDateBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelDataBase.Designer.cs">
+    <Compile Include="ModelDateBase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDataBase.edmx</DependentUpon>
+      <DependentUpon>ModelDateBase.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -127,12 +127,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="ModelDataBase.edmx">
+    <EntityDeploy Include="ModelDateBase.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelDataBase.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelDateBase.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModelDataBase.edmx.diagram">
-      <DependentUpon>ModelDataBase.edmx</DependentUpon>
+    <None Include="ModelDateBase.edmx.diagram">
+      <DependentUpon>ModelDateBase.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -147,15 +147,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelDataBase.Context.tt">
+    <Content Include="ModelDateBase.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDataBase.edmx</DependentUpon>
-      <LastGenOutput>ModelDataBase.Context.cs</LastGenOutput>
+      <DependentUpon>ModelDateBase.edmx</DependentUpon>
+      <LastGenOutput>ModelDateBase.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelDataBase.tt">
+    <Content Include="ModelDateBase.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDataBase.edmx</DependentUpon>
-      <LastGenOutput>ModelDataBase.cs</LastGenOutput>
+      <DependentUpon>ModelDateBase.edmx</DependentUpon>
+      <LastGenOutput>ModelDateBase.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

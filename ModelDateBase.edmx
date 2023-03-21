@@ -43,7 +43,7 @@
           <Property Name="Category" Type="Int32" Nullable="false" />
           <Property Name="Post" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="WorkerCashEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="WorkerCashEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="EmployeeCashes" EntityType="Self.EmployeeCash" />
         </EntityContainer>
       </Schema>
@@ -51,7 +51,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище WorkerCashModelContainer" CdmEntityContainer="WorkerCashEntities2">
+        <EntityContainerMapping StorageEntityContainer="Хранилище WorkerCashModelContainer" CdmEntityContainer="WorkerCashEntities3">
           <EntitySetMapping Name="EmployeeCashes">
             <EntityTypeMapping TypeName="WorkerCashModel.EmployeeCash">
               <MappingFragment StoreEntitySet="EmployeeCash">

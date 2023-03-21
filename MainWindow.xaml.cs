@@ -22,7 +22,7 @@ namespace Prakt17_praktika1_
     /// </summary>
     public partial class MainWindow : Window
     {
-        WorkerCashEntities2 db = WorkerCashEntities2.GetContext();
+        WorkerCashEntities3 db = WorkerCashEntities3.GetContext();
 
         public MainWindow()
         {

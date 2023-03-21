@@ -25,7 +25,7 @@ namespace Prakt17_praktika1_
             InitializeComponent();
         }
 
-        WorkerCashEntities2 db = WorkerCashEntities2.GetContext();
+        WorkerCashEntities3 db = WorkerCashEntities3.GetContext();
         EmployeeCash employee;
         private void Quit(object sender, RoutedEventArgs e)
         {

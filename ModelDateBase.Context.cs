@@ -13,10 +13,10 @@ namespace Prakt17_praktika1_
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WorkerCashEntities2 : DbContext
+    public partial class WorkerCashEntities3 : DbContext
     {
-        public WorkerCashEntities2()
-            : base("name=WorkerCashEntities2")
+        public WorkerCashEntities3()
+            : base("name=WorkerCashEntities3")
         {
         }
     
@@ -27,12 +27,14 @@ namespace Prakt17_praktika1_
     
         public virtual DbSet<EmployeeCash> EmployeeCashes { get; set; }
 
-        private static WorkerCashEntities2 context;
+        private static WorkerCashEntities3 context;
 
-        public static WorkerCashEntities2 GetContext()
+        public static WorkerCashEntities3 GetContext()
         {
             if (context == null)
-                context = new WorkerCashEntities2();
+            {
+                context = new WorkerCashEntities3();
+            }
             return context;
         }
     }
